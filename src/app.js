@@ -16,7 +16,6 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(function validateBearerToken(req, res, next) {
   const apiToken = process.env.API_TOKEN
-  console.log(apiToken);
   const authToken = req.get('Authorization')
   logger.error(`Unauthorized request to path: ${req.path}`);
 
