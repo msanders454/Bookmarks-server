@@ -4,6 +4,7 @@ const express = require('express');
 const uuid = require('uuid/v4'); //generate uuids for new bookmark ids
 const logger = require('../logger');
 const store = require('../store')
+const { isWebUri } = require('valid-url')
 const bookmarkRouter = express.Router(); 
 const bodyParser = express.json(); //to parse json in POST endpoint
 const { bookmarks } = require('../store')
@@ -73,7 +74,7 @@ bookmarkRouter
 .delete((req, res, next) => {
     
     const { id  } = req.params;
-    const bookmarkIndex = bookmarks.findIndex(b => b.id === bookmark_id);
+    const bookmarkIndex = bookmarks.findIndex(b => b.id === id);
 
     if (bookmarkIndex === -1) {
       logger.error(`Bookmark with id ${id} not found.`);
