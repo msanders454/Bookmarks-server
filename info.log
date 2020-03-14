@@ -89,3 +89,4 @@
 {"message":"Unauthorized request to path: /bookmark/42db23ee-8f07-4433-a1eb-da014794c8a7","level":"error"}
 {"message":"Bookmark with id 42db23ee-8f07-4433-a1eb-da014794c8a7 deleted.","level":"info"}
 {"message":"Unauthorized request to path: /bookmark","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
